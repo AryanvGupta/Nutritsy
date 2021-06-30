@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/out.css') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Output</title>
+</head>
+
+
+<body>
+    <div>
+        <p class="brand">Nutritsy</p>
+        
+        <a id="about" href="{{ url_for('home') }}">Home</a>
+        <a id="developers" href="{{ url_for('developers_page') }}">Developers</a>
+        <a id="features" href="{{ url_for('feature_page') }}">Features</a>
+        <a id="contact" onclick="mail()" >Contact Us</a>
+    </div>
+
+
+    <div>
+        <div>
+            <img src="static/image_data/output/Frame 5.png" class="blob">
+        </div>
+    
+        <div>
+            <img src={{img_src}} class="fImg" alt="">
+        </div>
+        
+        <p class="fName">{{Fruit_Name}}</p>    
+    </div>
+    
+
+    <div>
+        <p class="head">Nutritional Values (per 100g)</p>
+
+
+        <div class="divTable unstyledTable">
+            <div class="divTableBody">
+
+                <div class="divTableRow">
+                    <div class="divTableCell">Energy   -   {{energy}} g</div>
+                </div>
+
+                <div class="divTableRow">
+                    <div class="divTableCell">Fats   -   {{fats}} g</div>
+                </div>
+
+                <div class="divTableRow">
+                    <div class="divTableCell">Protein   -   {{protein}} g</div>
+                </div>
+
+                <div class="divTableRow">
+                    <div class="divTableCell">Carbs   -   {{carbs}} g</div>
+                </div>
+
+                <div class="divTableRow">
+                    <div class="divTableCell">Sugar   -   {{sugar}} g</div>
+                </div>
+
+                <div class="divTableRow">
+                    <div class="divTableCell">Fiber   -   {{fiber}} g</div>
+                </div>
+
+                <div class="divTableRow">
+                    <div class="divTableCell">Sodium   -   {{sodium}} mg</div>
+                </div>
+
+                <div class="divTableRow">
+                    <div class="divTableCell">Calcium   -   {{calcium}} mg</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="fInfo">
+
+        <form method="POST" action="/moreinfoEnglish?fruit_name={{Fruit_Name}}">
+            <button id="minfo"> More Info. </button>
+        </form>
+    </div>
+        
+    <div>
+        <form method="POST" , action="/recommend?fruit_name={{Fruit_Name}}">
+            <button class="reco">Recommendation</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p class="contactUs">Contact Us: customerSupport@nutritsy.com</p>
+        <p class="copyright">Copyright © 2021 Nutritsy</p>
+    </div>
+
+    <script type="text/javascript">
+        function mail(){
+            window.location.href = 'mailto:customerSupport@nutritsy.com?subject= &body=';
+        }
+    </script>
+    
+</body>
+</html>
+

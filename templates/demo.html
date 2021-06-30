@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/demo.css') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Input</title>
+</head>
+
+
+<body>
+    <div>
+        <p class="brand">Nutritsy</p>
+
+        <a id="about" href="{{ url_for('home') }}">Home</a>
+        <a id="developers" href="{{ url_for('developers_page') }}">Developers</a>
+        <a id="features" href="{{ url_for('feature_page') }}">Features</a>
+        <a id="contact" onclick="mail()" >Contact Us</a>
+    </div>
+
+    <div>
+        <form method="POST" action="/info">
+            <div>
+                <div class="bg">
+                </div>
+        
+                <label for="image">
+                    <input type="file" name="image" id="image" style="display:none;" onchange="readURL(event);" accept=".png, .jpg, .jpeg" />
+                    <img src="static/image_data/input/upload.svg" id="image" alt="Try Again..!">
+                </label>
+                <img id="blah" />
+
+                <p class="uploadText">File accepted : JPG and PNG</p>
+            </div>
+
+
+            <div>
+                <button class="proceed">Proceed</button>
+            </div>
+        </form>
+    </div>
+    
+
+    <div class="footer">
+        <p class="contactUs">Contact Us: customerSupport@nutritsy.com</p>
+        <p class="copyright">Copyright © 2021 Nutritsy</p>
+    </div>
+
+    <script>
+        var readURL = function(event) {
+          var output = document.getElementById('blah');
+          output.style.zIndex = "1"
+          output.src = URL.createObjectURL(event.target.files[0]);
+          output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+          }
+        };
+
+        function mail(){
+            window.location.href = 'mailto:customerSupport@nutritsy.com?subject= &body=';
+        }
+    </script>
+    
+</body>
+</html>
+

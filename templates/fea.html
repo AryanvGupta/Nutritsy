@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="fea.css">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/fea.css') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Features</title>
+</head>
+
+
+<body>
+    <div>
+        <p class="brand">Nutritsy</p>
+
+        <span class="navBar">
+            <a id="about" href="{{ url_for('home') }}">Home</a>
+            <a id="developers" href="{{ url_for('developers_page') }}">Developers</a>
+            <a id="features" href="{{ url_for('feature_page') }}">Features</a>
+            <a id="contact" onclick="mail()" >Contact Us</a>
+        </span>
+    </div>
+
+
+    <p class="head">Features</p>
+
+
+
+    
+    <div class="f1"></div>
+
+    <p class="f1Head">Can’t find your favourit </p>
+    
+    <img src="static/image_data/features/Group 2.png" class="f1Img">
+
+    <p class="f1Info">Don’t worry <br> we’ll recommend u the alternative of your favourite with similar nutrition value so that u don’t miss on your health.</p>
+    
+
+    <div>
+        <div class="f2"></div>
+
+        <p class="f2Head">Free Nutrition</p>
+
+        <img src="static/image_data/features/Group 5.png" class="f2Img">
+        
+        <p class="f2Info">Get to know all about the nutrition which u can get from the fruits and vegetable u eat
+            that too for FREE.</p>
+    </div>
+
+
+    <div>
+        <div class="f3"></div>
+        
+        <p class="f3Head">Easy to use</p>
+        
+        <img src="static/image_data/features/Group.png" class="f3Img">
+        
+        <p class="f3Info">All u need to do is upload an image.
+            We will classify the image and provide u with all the information about the fruit/vegetable.</p>
+    </div>
+    
+
+
+
+
+    <div class="footer">
+        <p class="contactUs">Contact Us: customerSupport@nutritsy.com</p>
+        <p class="copyright">Copyright © 2021 Nutritsy</p>
+    </div>
+
+    <script type="text/javascript">
+        function mail(){
+            window.location.href = 'mailto:customerSupport@nutritsy.com?subject= &body=';
+        }
+    </script>
+    
+</body>
+</html>
+

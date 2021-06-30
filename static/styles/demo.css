@@ -1,0 +1,256 @@
+
+
+.brand{
+    position: absolute;
+    width: 125px;
+    height: 45px;
+    left: 141px;
+    top: 11px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 45px;
+    /* identical to box height */
+
+    background: -webkit-linear-gradient(#43CDE0, #59E043);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* linear-gradient(180deg, #43CDE0 0%, #59E043 100%); */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#about{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    left: 1274px;
+    top: 56px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+
+    color: #000000;
+}
+
+#developers{
+    position: absolute;
+    width: 101px;
+    height: 30px;
+    left: 1387px;
+    top: 56px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+
+    color: #000000;
+}
+
+#features{
+    position: absolute;
+    width: 88px;
+    height: 30px;
+    left: 1535px;
+    top: 56px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+
+    color: #000000;
+}
+
+#contact{
+    position: absolute;
+    width: 112px;
+    height: 30px;
+    left: 1673px;
+    top: 56px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    color: #000000;
+}
+
+.bg{
+    position: absolute;
+    width: 672px;
+    height: 527px;
+    left: 624px;
+    top: 175px;
+
+    background: #E7FBFF;
+    border-radius: 10px;
+}
+
+#preview{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 924px;
+    top: 514px;
+}
+
+#image{
+    position: absolute;
+    width: 73px;
+    height: 73px;
+    left: 917px;
+    top: 544px;
+
+    cursor: pointer;
+}
+
+#blah{
+    position: absolute;
+    max-width: 310px;
+    max-height: 350px;
+    left: 805px;
+    top: 185px;
+
+    background: url(.jpg), #FCF4FB;
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    z-index: 1;
+
+}
+
+.uploadText{
+    position: absolute;
+    width: 205px;
+    height: 19px;
+    left: 857px;
+    top: 657px;
+
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #A6A6A6;    
+}
+
+.proceed{
+    position: absolute;
+    width: 193px;
+    height: 59px;
+    left: 864px;
+    top: 737px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;
+    
+    
+    border: none;
+    /* border-image-source: linear-gradient(180deg, #59E043 0%, #43CDE0 100%); */
+
+    outline: none;
+
+    background: linear-gradient(180deg, rgba(67, 205, 224, 0.5) 0%, #59E043 100%);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.footer{
+    position: absolute;
+    width: 1920px;
+    height: 65px;
+    left: 0px;
+    top: 904px;
+
+    background: #93FD82;
+}
+
+.contactUs{
+    position: absolute;
+    width: 256px;
+    height: 48px;
+    left: 1516px;
+    /* top: 1023.97px; */
+
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    color: #000000;
+}
+
+.copyright{
+    position: absolute;
+    width: 213px;
+    height: 24.03px;
+    left: 136px;
+    /* top: 1035.97px; */
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #000000;
+}

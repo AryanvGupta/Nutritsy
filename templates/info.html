@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="static/styles/info.css"> -->
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/info.css') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>More Info.</title>
+</head>
+
+
+<body>
+        <div>
+            <p class="brand">Nutritsy</p>
+            <span class="navBar">
+                <a id="about" href="{{ url_for('home') }}">Home</a>
+                <a id="developers" href="{{ url_for('developers_page') }}">Developers</a>
+                <a id="features" href="{{ url_for('feature_page') }}">Features</a>
+                <a id="contact" onclick="mail()" >Contact Us</a>
+            </span>
+        </div>
+
+            
+        <div class="fName">{{fruit_name}}</div>
+
+
+        <div>
+            <img src={{img_src}} alt="" class="fImg" >
+        </div>
+
+
+        <div>
+
+            <img src="static/image_data/info/Group 8.svg" alt="" class="head" >
+
+            <textarea disabled name="" id="infoBox">{{info}}</textarea>
+            
+            <div class="sbreak">
+              
+            </div>
+
+
+            <audio id="nyan" src={{fruit_audio}} preload="metadata" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <a class="btn" id="nyan-btn">Play</a>
+            <div class="btn1"></div>
+
+
+            <form method="POST" action="/moreinfo{{lang}}?fruit_name={{fruit_name}}">
+              <button id="language"> {{lang}} </button>
+            </form>
+
+            <!-- <a id="language" onclick="change(this)">English</a>-->
+
+            <!-- <label for="volume">
+                <img  src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/500px-Speaker_Icon.svg.png" onclick='toggleSound(this);' id="volume">
+            </label> -->
+
+
+            <!-- <label for="image">
+                    <input type="file" name="image" id="image" style="display:none;" onchange="readURL(event);" accept=".png, .jpg, .jpeg" />
+                    <img src="static/image_data/input/upload.svg" id="image" alt="Try Again..!">
+            </label> -->
+
+        </div>
+
+
+        <div class="footer">
+            <p class="contactUs">Contact Us: customerSupport@nutritsy.com</p>
+            <p class="copyright">Copyright © 2021 Nutritsy</p>
+        </div>
+
+
+        <script>
+
+            // function toggleSound(img) {
+            //     img.src = img.src == "http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/500px-Speaker_Icon.svg.png" ? "https://cdn2.iconfinder.com/data/icons/picons-essentials/57/music_off-512.png" : "http://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/500px-Speaker_Icon.svg.png";
+            // }
+
+
+
+            var nyan = document.getElementById('nyan');
+            var nyanBtn = document.getElementById('nyan-btn');
+
+            function playPause(song){
+               if (song.paused && song.currentTime >= 0 && !song.ended) {
+                  song.play();
+                  nyanBtn.text = "Stop"
+               } else {
+                  song.pause();
+                  nyanBtn.text = "Play"
+               }
+            }
+
+            function reset(btn, song){
+               if(btn.classList.contains('playing')){
+                  btn.classList.toggle('playing');
+               }
+               song.pause();
+               song.currentTime = 0;
+            }
+
+            function progress(btn, song){
+               setTimeout(function(){
+                  var end = song.duration; 
+                  var current = song.currentTime;
+                  var percent = current/(end/100);
+                  //check if song is at the end
+                  if(current==end){
+                     reset(btn, song);
+                  }
+                  //set inset box shadow
+                  btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+                  //call function again
+                  progress(btn, song);     
+               }, 1000);
+            }
+
+            nyanBtn.addEventListener('click', function(){
+               nyanBtn.classList.toggle('playing');
+               playPause(nyan);
+               progress(nyanBtn, nyan);
+            });
+
+            function mail(){
+              window.location.href = 'mailto:customerSupport@nutritsy.com?subject= &body=';
+            }
+
+            // function change() 
+            // {
+            //     var elem = document.getElementById("language");
+            //     if (elem.text=="English") elem.text = "Hindi";
+            //     else elem.text = "English";
+            // }
+
+        </script>
+</body>
+</html>

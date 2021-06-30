@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/home.css') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Home</title>
+</head>
+
+
+<body>
+    <div>
+        <!-- <img src="white gradient.svg" id="whitegradient"></img> -->
+        <div id="whitegradient"></div>
+        <img id="union" src="static/image_data/home/union.svg">
+        <img id="union1" src="static/image_data/home/Union1.png">
+    </div>
+
+    <div>
+        <p class="brand">Nutritsy</p>
+
+        <span class="navBar">
+            <a href="#nHead" id="about">About Us</a>
+            <!-- <a id="about" href="{{ url_for('.home', _anchor='sec2') }}">About Us</a> -->
+            <!-- <a id="about" href="{{ url_for('home') }}">About Us</a> -->
+            <a id="developers" href="{{ url_for('developers_page') }}">Developers</a>
+            <a id="features" href="{{ url_for('feature_page') }}">Features</a>
+            <a id="contact" onclick="mail()" >Contact Us</a>
+        </span>
+    </div>
+
+    
+    <div>
+        <form method="POST" action="/upload">
+            <button class="get">Get Started..!</button>
+        </form>
+    </div>
+
+    <section id="sec1">
+
+        <div id="div1">
+            <p id="nHead">About Nutritsy</p>   
+            <p class="nContent">Nutritsy is not just a platform that provides one the ease to simply upload an image of their produce and know about the nutritional value of that but it also tends to provide some viable information about that produce but that’s not the end of it. We at Nutritsy provide our users with a recommendation system which suggests the user with few produces which are similar to the one they are looking for. This recommendation system is a blessing of high-end computation which keeps in check the nutritional values, region, cultivation and other parameters and gives user the best recommendation. Nutritsy aims to help their user with the most accurate prediction and provide them with all the important info. about the fruits or vegetable along with its nutritional values. Further using this so as to provide user with a few recommendations which can work as an alternative for the given produce.</p> 
+        </div>
+
+
+        <div>
+            <div class="box1"></div>
+            <p class="head1">Upload</p>
+            <img src="static/image_data/home/Group.png" class="img1">
+            <p class="content1">Simply click on the upload option, browse through the device storage to find the image and click on ‘proceed’.</p>    
+        </div>
+
+        
+
+        <div class="box2"></div>
+        <p class="head2">About the produce</p>
+        <img src="static/image_data/home/healthy-food.png" class="img2">
+        <p class="content2">Now you can see the nutritional value of the produce and further know more about its benifits, where it is cultivated, recipies and much more.</p>
+
+
+        <div class="box3"></div>
+        <p class="head3">Recommendations</p>
+        <img src="static/image_data/home/Group1.png" class="img3">
+        <p class="content3">Click on the recommendation button to view alternative fruits with similar nutritional value</p>
+    
+    </section>
+
+    <section id="sec2"></section>
+
+    <div class="footer">
+        <p class="contactUs">Contact Us: customerSupport@nutritsy.com</p>
+        <p class="copyright">Copyright © 2021 Nutritsy</p>
+    </div>
+    
+
+    <script type="text/javascript">
+        function mail(){
+            window.location.href = 'mailto:customerSupport@nutritsy.com?subject= &body=';
+        }
+    </script>
+
+</body>
+</html>

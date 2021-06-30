@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/dev.css') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Developers</title>
+</head>
+
+
+<body>
+    <div>
+        <p class="brand">Nutritsy</p>
+
+        <span class="navBar">
+            <a id="about" href="{{ url_for('home') }}">Home</a>
+            <a id="developers" href="{{ url_for('developers_page') }}">Developers</a>
+            <a id="features" href="{{ url_for('feature_page') }}">Features</a>
+            <a id="contact" onclick="mail()" >Contact Us</a>
+        </span>
+    </div>
+
+
+    <img src="static/image_data/developers/top.svg" id="bottom">
+    <img src="static/image_data/developers/bottom.svg" id="top">
+
+     <!-- <img src="static/image_data/developers/Group 9.svg" id="blob"> -->
+
+    <!-- <div class="dev1"> -->
+
+    </div>
+    <div>
+        <img src="static/image_data/developers/chirag.png" class="dev1">
+        <p class="dev1Name"> Chirag Malaviya </p>
+        <p class="dev1Info"> Deep-learning analyist <br> Model Optimization <br> Information Retrival <br> Deployment <br> Recommendation <br> Hyperparamenter-tuning <br> Transfer-learning </p>
+    </div>
+    
+    <div>
+        <img src="static/image_data/developers/aryan.png" class="dev2">
+        <p class="dev2Name"> Aryan Gupta </p>
+        <p class="dev2Info"> Web Desginer <br> Development <br> Data Extraction <br> System Analysis <br> Testing </p>
+    </div>
+
+    
+
+    <div class="footer">
+        <p class="contactUs">Contact Us: customerSupport@nutritsy.com</p>
+        <p class="copyright">Copyright © 2021 Nutritsy</p>
+    </div>
+
+    <script type="text/javascript">
+        function mail(){
+            window.location.href = 'mailto:customerSupport@nutritsy.com?subject= &body=';
+        }
+    </script>
+
+</body>
+</html>

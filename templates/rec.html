@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/rec.css') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Recommendation</title>
+</head>
+
+
+<body>
+    <div>
+        <p class="brand">Nutritsy</p>
+
+        <a id="about" href="{{ url_for('home') }}">Home</a>
+        <a id="developers" href="{{ url_for('developers_page') }}">Developers</a>
+        <a id="features" href="{{ url_for('feature_page') }}">Features</a>
+        <a id="contact" onclick="mail()" >Contact Us</a>
+    </div>
+
+    <div>
+        <div class="bgRect1"></div>
+        <img class="fruit1" src="{{f1_src}}">
+        <!-- <div class="f1name">{{Fruit1}}</div> -->
+        <form action="/recommendinfo?fruitname={{Fruit1}}" method="POST">
+            <button class="f1name">{{Fruit1}}</button>
+        </form>
+        <p class="f1info">{{f1_info}}</p>
+    
+
+        <div class="bgRect2"></div>
+        <img class="fruit2" src="{{f2_src}}">
+        <!-- <div class="f2name">{{Fruit2}}</div> -->
+        <form action="/recommendinfo?fruitname={{Fruit2}}" method="POST">
+            <button class="f2name">{{Fruit2}}</button>
+        </form>
+        <p class="f2info">{{f2_info}}</p>
+
+
+        <div class="bgRect3"></div>
+        <img class="fruit3" src="{{f3_src}}">
+        <!-- <div class="f3name">{{Fruit3}}</div> -->
+        <form action="/recommendinfo?fruitname={{Fruit3}}" method="POST">
+            <button class="f3name">{{Fruit3}}</button>
+        </form>
+        <p class="f3info">{{f3_info}}</p>
+
+
+        <div class="bgRect4"></div>
+        <img class="fruit4" src="{{f4_src}}">
+        <!-- <div class="f4name">{{Fruit4}}</div> -->
+        <form action="/recommendinfo?fruitname={{Fruit4}}" method="POST">
+            <button class="f4name">{{Fruit4}}</button>
+        </form>
+        <p class="f4info">{{f4_info}}</p>
+
+    </div>
+
+
+    <div class="footer">
+        <p class="contactUs">Contact Us: customerSupport@nutritsy.com</p>
+        <p class="copyright">Copyright © 2021 Nutritsy</p>
+    </div>
+
+    <script type="text/javascript">
+        function mail(){
+            window.location.href = 'mailto:customerSupport@nutritsy.com?subject= &body=';
+        }
+    </script>
+    
+</body>
+</html>
